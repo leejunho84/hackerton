@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>맥북이 탐나::hackton</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+<header>
+	<div class="search-box">
+		<input type="text" class="search-input" name="search" placeholder="검색" />
+		<a href="#" class="search-btn"><i class="search-icon glyphicon glyphicon-search" aria-hidden="true"></i></a>
+	</div>
+	<div class="photo-mask__rect main"></div>
+	<div class="component-file__camera">
+		<form id="photosent" action="/form.html" method="GET" enctype="multipart/form-data">
+			<input type="file" class="camera" id="capture" name="capture" accept="image/*">
+			<label for="capture">
+				<i class="glyphicon glyphicon-camera"></i>
+			</label>
+		</form>
+	</div>
+</header>
+<section>
+	<article class="today-hotdeal">
+		<h2 class="hdtxt">hot deal</h2>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+			<ul class="swiper">
+				<li class="swiper-slide">
+					<div class="product-wrap">
+						<a class="product-deal" href="a">
+							<div class="product-thumb">
+								<img src="images/dummy.jpg" />
+							</div>
+							<div class="product-info">
+								<span class="product-title">선물세트선물세트선물세트선물세트선물세트선물세트선물</span>
+								<span class="product-price">
+									<strong class="price">100,000</strong>원
+								</span>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li class="swiper-slide">
+					<div class="product-wrap">
+						<a class="product-deal" href="a">
+							<div class="product-thumb">
+								<img src="images/dummy.jpg" />
+							</div>
+							<div class="product-info">
+								<span class="product-title"> 선물세트</span>
+								<span class="product-price">
+									<strong class="price">100,000</strong>원
+								</span>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li class="swiper-slide">
+					<div class="product-wrap">
+						<a class="product-deal" href="a">
+							<div class="product-thumb">
+								<img src="images/dummy.jpg" />
+							</div>
+							<div class="product-info">
+								<span class="product-title"> 선물세트</span>
+								<span class="product-price">
+									<strong class="price">100,000</strong>원
+								</span>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li class="swiper-slide">
+					<div class="product-wrap">
+						<a class="product-deal" href="a">
+							<div class="product-thumb">
+								<img src="images/dummy.jpg" />
+							</div>
+							<div class="product-info">
+								<span class="product-title"> 선물세트</span>
+								<span class="product-price">
+									<strong class="price">100,000</strong>원
+								</span>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li class="swiper-slide">
+					<div class="product-wrap">
+						<a class="product-deal" href="a">
+							<div class="product-thumb">
+								<img src="images/dummy.jpg" />
+							</div>
+							<div class="product-info">
+								<span class="product-title"> 선물세트</span>
+								<span class="product-price">
+									<strong class="price">100,000</strong>원
+								</span>
+							</div>
+						</a>
+					</div>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</article>
+	<article class="favorite-item default-item">
+		<h2 class="hdtxt">인기상품</h2>
+		<div class="item">
+			<a href="#">
+				<div class="item-thumb">
+					<img src="images/dummy.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title"> 선물세트 선물세트 선물세트 선 선물세트물세트 선물세트</span>
+					<span class="item-price">
+						<strong class="price">100,000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item">
+			<a href="#">
+				<div class="item-thumb">
+					<img src="images/dummy.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title"> 선물세트</span>
+					<span class="item-price">
+						<strong class="price">100,000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item">
+			<a href="#">
+				<div class="item-thumb">
+					<img src="images/dummy.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title"> 선물세트</span>
+					<span class="item-price">
+						<strong class="price">100,000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item">
+			<a href="#">
+				<div class="item-thumb">
+					<img src="images/dummy.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title"> 선물세트</span>
+					<span class="item-price">
+						<strong class="price">100,000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item">
+			<a href="#">
+				<div class="item-thumb">
+					<img src="images/dummy.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title"> 선물세트</span>
+					<span class="item-price">
+						<strong class="price">100,000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item">
+			<a href="#">
+				<div class="item-thumb">
+					<img src="images/dummy.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title"> 선물세트</span>
+					<span class="item-price">
+						<strong class="price">100,000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item">
+			<a href="#">
+				<div class="item-thumb">
+					<img src="images/dummy.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title"> 선물세트</span>
+					<span class="item-price">
+						<strong class="price">100,000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item">
+			<a href="#">
+				<div class="item-thumb">
+					<img src="images/dummy.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title"> 선물세트</span>
+					<span class="item-price">
+						<strong class="price">100,000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+	</article>
+</section>
+<section class="layer-pop" style="display:none;">
+	<div class="modal-layer">
+		<div class="layer">
+			<div class="modal-header">
+				<h2>Image Select</h2>
+				<a href="" class="close-btn imgir"><span class="hdtxt">닫기</span></a>
+			</div>
+			<div class="modal-body">
+				<fieldset>
+					<div class="portals share-wrap">
+						<h3 class="title">portals</h3>
+						<div class="contents">
+							<ul class="scroll-wrap">
+								<li class="component-radio">
+									<input type="radio" name="chkimg" id="chkimg_0" />
+									<label for="chkimg_0">
+										<img src="images/dummy.jpg" />
+										<i class="glyphicon glyphicon-ok"></i>
+										<span class="dim"></span>
+									</label>
+								</li>
+								<li class="component-radio">
+									<input type="radio" name="chkimg" id="chkimg_1" />
+									<label for="chkimg_1">
+										<img src="images/dummy.jpg" />
+										<i class="glyphicon glyphicon-ok"></i>
+										<span class="dim"></span>
+									</label>
+								</li>
+								<li class="component-radio">
+									<input type="radio" name="chkimg" id="chkimg_2" />
+									<label for="chkimg_2">
+										<img src="images/dummy.jpg" />
+										<i class="glyphicon glyphicon-ok"></i>
+										<span class="dim"></span>
+									</label>
+								</li>
+								<li class="component-radio">
+									<input type="radio" name="chkimg" id="chkimg_3" />
+									<label for="chkimg_3">
+										<img src="images/dummy.jpg" />
+										<i class="glyphicon glyphicon-ok"></i>
+										<span class="dim"></span>
+									</label>
+								</li>
+								<li class="component-radio">
+									<input type="radio" name="chkimg" id="chkimg_4" />
+									<label for="chkimg_4">
+										<img src="images/dummy.jpg" />
+										<i class="glyphicon glyphicon-ok"></i>
+										<span class="dim"></span>
+									</label>
+								</li>
+								<li class="component-radio">
+									<input type="radio" name="chkimg" id="chkimg_5" />
+									<label for="chkimg_5">
+										<img src="images/dummy.jpg" />
+										<i class="glyphicon glyphicon-ok"></i>
+										<span class="dim"></span>
+									</label>
+								</li>
+								<li class="more">
+									<i class="glyphicon glyphicon-ok"></i>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="instargram share-wrap">
+						<h3 class="title">instagram</h3>
+						<div class="contents">
+							<ul class="scroll-wrap">
+								<li class="component-radio">
+									<input type="radio" name="chkimg" id="chkimg_6" />
+									<label for="chkimg_6">
+										<img src="images/dummy.jpg" />
+										<i class="glyphicon glyphicon-ok"></i>
+										<span class="dim"></span>
+									</label>
+								</li>
+								<li class="component-radio">
+									<input type="radio" name="chkimg" id="chkimg_7" />
+									<label for="chkimg_7">
+										<img src="images/dummy.jpg" />
+										<i class="glyphicon glyphicon-ok"></i>
+										<span class="dim"></span>
+									</label>
+								</li>
+								<li class="component-radio">
+									<input type="radio" name="chkimg" id="chkimg_8" />
+									<label for="chkimg_8">
+										<img src="images/dummy.jpg" />
+										<i class="glyphicon glyphicon-ok"></i>
+										<span class="dim"></span>
+									</label>
+								</li>
+								<li class="component-radio">
+									<input type="radio" name="chkimg" id="chkimg_9" />
+									<label for="chkimg_9">
+										<img src="images/dummy.jpg" />
+										<i class="glyphicon glyphicon-ok"></i>
+										<span class="dim"></span>
+									</label>
+								</li>
+								<li class="component-radio">
+									<input type="radio" name="chkimg" id="chkimg_10" />
+									<label for="chkimg_10">
+										<img src="images/dummy.jpg" />
+										<i class="glyphicon glyphicon-ok"></i>
+										<span class="dim"></span>
+									</label>
+								</li>
+								<li class="more">
+									<i class="glyphicon glyphicon-ok"></i>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default">검색</button>
+			</div>
+		</div>
+	</div>
+	<div class="dim-layer"></div>
+</section>
+<footer>
+	<address>
+		<strong>(주)지에스홈쇼핑 대표이사 허태수</strong>서울시 영등포구 선유로 75 GS강서타워<br>개인정보보호책임자: 홍경모 / 호스팅제공자 (주)지에스홈쇼핑<br>사업자등록번호 117-81-13253 통신판매업신고 영등포구청 제 2002-00068호<br>
+	</address>
+</footer>
+<script src="js/libs/jquery.1.7.2.js"></script>
+<script src="js/common.js"></script>
+<script src="js/swipe.js"></script>
+<script src="js/modallayer.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

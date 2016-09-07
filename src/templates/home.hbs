@@ -1,0 +1,54 @@
+{{> header}}
+
+<section>
+	<article class="today-hotdeal">
+		<h2 class="hdtxt">hot deal</h2>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+			<ul class="swiper">
+				
+				{{#each data.planPrdList}}
+				<li class="swiper-slide">
+					<div class="product-wrap" data-prdCd="{{prdCd}}">
+						<a class="product-deal" href="{{link}}">
+							<div class="product-thumb">
+								<img src="{{repImage}}" />
+							</div>
+							<div class="product-info">
+								<span class="product-title">{{prdNm}}</span>
+								<span class="product-price">
+									<strong class="price">{{salePrc}}</strong>원
+								</span>
+							</div>
+						</a>
+					</div>
+				</li>
+				{{/each}}
+
+			</ul>
+			</div>
+		</div>
+	</article>
+	<article class="favorite-item default-item">
+		<h2 class="hdtxt">인기상품</h2>
+
+		{{#each data.prdList}}
+		<div class="item" data-prdCd="{{prdCd}}">
+			<a href="{{link}}">
+				<div class="item-thumb">
+					<img src="{{repImage}}" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">{{prdNm}}</span>
+					<span class="item-price">
+						<strong class="price">{{salePrc}}</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		{{/each}}
+
+	</article>
+</section>
+
+{{> footer}}

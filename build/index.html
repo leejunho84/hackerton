@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>맥북이 탐나::hackton</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<script type="application/json" id="entry-data"></script>
+
+<header>
+	<div class="search-box">
+		<input type="text" class="search-input" name="search" placeholder="검색" />
+		<a href="#" class="search-btn"><i class="search-icon glyphicon glyphicon-search" aria-hidden="true"></i></a>
+	</div>
+	<div class="photo-mask__rect main"></div>
+	<div class="component-file__camera">
+		<form id="photosent" action="/form.html" method="GET" enctype="multipart/form-data">
+			<input type="file" class="camera" id="capture" name="capture" accept="image/*">
+			<label for="capture">
+				<i class="glyphicon glyphicon-camera"></i>
+			</label>
+		</form>
+	</div>
+</header>
+<section>
+	<article class="today-hotdeal">
+		<h2 class="hdtxt">hot deal</h2>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+			<ul class="swiper">
+				
+
+			</ul>
+			</div>
+		</div>
+	</article>
+	<article class="favorite-item default-item">
+		<h2 class="hdtxt">인기상품</h2>
+
+		<div class="item" data-prdCd="3480892">
+			<a href="/prd/prd.gs?prdid=21965500&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/3480892.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[SOLOIST] 슬릿 A라인 빅포켓 스커트 RE SADG3309</span>
+					<span class="item-price">
+						<strong class="price">25900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="7230997">
+			<a href="/prd/prd.gs?prdid=15566146&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/7230997.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">헤지스레이디스 15SS  퍼피자수 슬림팬츠 HSP05B102LI</span>
+					<span class="item-price">
+						<strong class="price">60860</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="10141764">
+			<a href="/prd/prd.gs?prdid=10141764&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/10141764.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[로보] 크링클양피코트+폭스베스트</span>
+					<span class="item-price">
+						<strong class="price">398000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="10809123">
+			<a href="/prd/prd.gs?prdid=18333755&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/10809123.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[빈폴레이디스] 핑크 기본 백기모 넥포인트 긴팔 티셔츠 (BF5Y41</span>
+					<span class="item-price">
+						<strong class="price">107400</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="10868346">
+			<a href="/prd/prd.gs?prdid=21696322&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/10868346.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">조이너스 썸머 모던 쉬폰 블라우스 4종</span>
+					<span class="item-price">
+						<strong class="price">49900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="11801865">
+			<a href="/prd/prd.gs?prdid=19302248&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/11801865.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">더블페이스 남녀 울기모 정장팬츠 3종 - P54F_M301PT</span>
+					<span class="item-price">
+						<strong class="price">17900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="11960224">
+			<a href="/prd/prd.gs?prdid=21696322&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/11960224.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">조이너스 썸머 모던 쉬폰 블라우스 4종</span>
+					<span class="item-price">
+						<strong class="price">49900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="11960561">
+			<a href="/prd/prd.gs?prdid=21589195&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/11960561.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[하프클럽/TNGTW_16SS]TNGTW 핀턱 자수 블라우스TYB06BT15_UDM</span>
+					<span class="item-price">
+						<strong class="price">29000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="11995407">
+			<a href="/prd/prd.gs?prdid=22180110&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/11995407.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">쁘띠 세일러 리본 블라우스(SS3LSE9)</span>
+					<span class="item-price">
+						<strong class="price">14500</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="12712732">
+			<a href="/prd/prd.gs?prdid=18333755&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/12712732.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[빈폴레이디스] 핑크 기본 백기모 넥포인트 긴팔 티셔츠 (BF5Y41</span>
+					<span class="item-price">
+						<strong class="price">107400</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="12807032">
+			<a href="/prd/prd.gs?prdid=21252012&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/12807032.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">APOSTROPHE 어포스트로피 썸머 프레시 점퍼</span>
+					<span class="item-price">
+						<strong class="price">39000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="13099043">
+			<a href="/prd/prd.gs?prdid=22129943&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/13099043.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[에딸라쥬] 플리츠소매티_E62CTS113</span>
+					<span class="item-price">
+						<strong class="price">32800</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="13099047">
+			<a href="/prd/prd.gs?prdid=13099047&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/13099047.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[토리버치]시몬가디건 50003164 10133164 5종 특가</span>
+					<span class="item-price">
+						<strong class="price">141120</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="13099500">
+			<a href="/prd/prd.gs?prdid=21740699&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/13099500.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[MLB]남여공용 등 MESH 배새로고 티셔츠 (31TSS5631)</span>
+					<span class="item-price">
+						<strong class="price">26100</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="13126005">
+			<a href="/prd/prd.gs?prdid=16078640&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/13126005.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[타미힐피거] 여성 PK 반팔티셔츠</span>
+					<span class="item-price">
+						<strong class="price">39800</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="13242588">
+			<a href="/prd/prd.gs?prdid=13242588&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/13242588.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[베스띠벨리] 트렌치코트 3종 택1</span>
+					<span class="item-price">
+						<strong class="price">29900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="13486278">
+			<a href="/prd/prd.gs?prdid=19491382&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/13486278.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[바닐라비] 스타일리쉬 엣지 야상점퍼_LIFU903RP1</span>
+					<span class="item-price">
+						<strong class="price">39600</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="13504057">
+			<a href="/prd/prd.gs?prdid=20707864&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/13504057.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[올리비아로렌] 변형 하운드투스 원피스 VOCOAPM3391_13</span>
+					<span class="item-price">
+						<strong class="price">19000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="13586997">
+			<a href="/prd/prd.gs?prdid=22231149&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/13586997.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[빌드]BGFN503 버튼디테일 니트/빅사이즈/미시/여성/박시/가오리</span>
+					<span class="item-price">
+						<strong class="price">29900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="13690012">
+			<a href="/prd/prd.gs?prdid=22103644&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/13690012.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">OSB09 반팔롤업앞단작블라우스/롤업/오피스룩/정장팬츠</span>
+					<span class="item-price">
+						<strong class="price">6900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="14071346">
+			<a href="/prd/prd.gs?prdid=21252012&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/14071346.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">APOSTROPHE 어포스트로피 썸머 프레시 점퍼</span>
+					<span class="item-price">
+						<strong class="price">39000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="14627709">
+			<a href="/prd/prd.gs?prdid=21136799&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/14627709.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[페이지플린] [기획]자가드테잎배색블라우스_P6B-BL020</span>
+					<span class="item-price">
+						<strong class="price">24700</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="14735502">
+			<a href="/prd/prd.gs?prdid=19620263&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/14735502.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">소프트 레이온 허리밴딩 네츄럴 팬츠</span>
+					<span class="item-price">
+						<strong class="price">9800</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15348579">
+			<a href="/prd/prd.gs?prdid=21206836&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15348579.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[샤트렌] 7부소배트위드자켓-HLMJKM060</span>
+					<span class="item-price">
+						<strong class="price">27900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15359911">
+			<a href="/prd/prd.gs?prdid=21252012&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15359911.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">APOSTROPHE 어포스트로피 썸머 프레시 점퍼</span>
+					<span class="item-price">
+						<strong class="price">39000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15366904">
+			<a href="/prd/prd.gs?prdid=18221611&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15366904.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[코데즈컴바인] 시크 울 니트가디건</span>
+					<span class="item-price">
+						<strong class="price">29000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15446102">
+			<a href="/prd/prd.gs?prdid=20056988&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15446102.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[로엠] 모던 원턱 솔리드 팬츠 RMTW3121R3_35</span>
+					<span class="item-price">
+						<strong class="price">5600</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15565360">
+			<a href="/prd/prd.gs?prdid=20229577&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15565360.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[빈폴레이디스] 그린 기본핏 보일 체크 셔츠</span>
+					<span class="item-price">
+						<strong class="price">139300</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15566078">
+			<a href="/prd/prd.gs?prdid=13099047&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15566078.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[토리버치]시몬가디건 50003164 10133164 5종 특가</span>
+					<span class="item-price">
+						<strong class="price">141120</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15566137">
+			<a href="/prd/prd.gs?prdid=20784190&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15566137.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">르네크루 썸머 햅번 팬츠1종(벨트포함)</span>
+					<span class="item-price">
+						<strong class="price">49000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15566146">
+			<a href="/prd/prd.gs?prdid=15566146&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15566146.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">헤지스레이디스 15SS  퍼피자수 슬림팬츠 HSP05B102LI</span>
+					<span class="item-price">
+						<strong class="price">60860</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15578923">
+			<a href="/prd/prd.gs?prdid=22099205&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15578923.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[리스트]울소재 슬림 롱 가디건</span>
+					<span class="item-price">
+						<strong class="price">29800</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15589366">
+			<a href="/prd/prd.gs?prdid=21572284&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15589366.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[리바이스]여성 슈퍼스키니 스판짱(18881-0020)</span>
+					<span class="item-price">
+						<strong class="price">31050</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15594105">
+			<a href="/prd/prd.gs?prdid=15594105&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15594105.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[ROBO] 와이드토스카나 카라코트</span>
+					<span class="item-price">
+						<strong class="price">498000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15599044">
+			<a href="/prd/prd.gs?prdid=19302248&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15599044.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">더블페이스 남녀 울기모 정장팬츠 3종 - P54F_M301PT</span>
+					<span class="item-price">
+						<strong class="price">17900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15694927">
+			<a href="/prd/prd.gs?prdid=19170653&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15694927.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">닥스숙녀 네이비 긴팔 캐주얼 폴리에스터 자켓 OUH05AK02NV</span>
+					<span class="item-price">
+						<strong class="price">200160</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15695120">
+			<a href="/prd/prd.gs?prdid=20983486&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15695120.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">피그먼트 네츄럴컷팅 반팔티셔츠</span>
+					<span class="item-price">
+						<strong class="price">2900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15710790">
+			<a href="/prd/prd.gs?prdid=19551962&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15710790.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">클래식 세미루즈핏 헤링본 울코트</span>
+					<span class="item-price">
+						<strong class="price">29800</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15718257">
+			<a href="/prd/prd.gs?prdid=22166229&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15718257.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[나이스클랍](N161KSK002)NICECLAUP</span>
+					<span class="item-price">
+						<strong class="price">80990</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15718311">
+			<a href="/prd/prd.gs?prdid=21244687&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15718311.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[에딸라쥬] 로프레이스블라우스_E62BBL172</span>
+					<span class="item-price">
+						<strong class="price">17800</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15773742">
+			<a href="/prd/prd.gs?prdid=18048671&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15773742.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">ROBO 프리미엄 뉴가죽코트</span>
+					<span class="item-price">
+						<strong class="price">398000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15814820">
+			<a href="/prd/prd.gs?prdid=19302248&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15814820.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">더블페이스 남녀 울기모 정장팬츠 3종 - P54F_M301PT</span>
+					<span class="item-price">
+						<strong class="price">17900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15816967">
+			<a href="/prd/prd.gs?prdid=19882873&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15816967.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[헤레이스]차이나포켓블라우스CHF16S229</span>
+					<span class="item-price">
+						<strong class="price">25800</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15835909">
+			<a href="/prd/prd.gs?prdid=19620263&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15835909.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">소프트 레이온 허리밴딩 네츄럴 팬츠</span>
+					<span class="item-price">
+						<strong class="price">9800</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15840859">
+			<a href="/prd/prd.gs?prdid=15840859&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15840859.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">15SS 닥스숙녀 베이지 하우스체크 배색 칼라 하프코트 DLH05A101BI</span>
+					<span class="item-price">
+						<strong class="price">205840</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15840946">
+			<a href="/prd/prd.gs?prdid=21855487&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15840946.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">엄마옷 데드라 6A-OP014 양포켓플리츠원피스</span>
+					<span class="item-price">
+						<strong class="price">21300</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15841119">
+			<a href="/prd/prd.gs?prdid=21757443&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15841119.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[더아이잗] 어반 배색 레이어 원피스(IIDD000718)</span>
+					<span class="item-price">
+						<strong class="price">10000</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15863066">
+			<a href="/prd/prd.gs?prdid=21459622&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15863066.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[하프클럽/올리비아로렌](올리비아로렌) 리얼 fur 포인트 후..</span>
+					<span class="item-price">
+						<strong class="price">246050</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15863180">
+			<a href="/prd/prd.gs?prdid=22099205&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15863180.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[리스트]울소재 슬림 롱 가디건</span>
+					<span class="item-price">
+						<strong class="price">29800</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="15886589">
+			<a href="/prd/prd.gs?prdid=22091657&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images/rep/15886589.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[하프클럽/테레지아](전상품 딱 5900원) 간절기필수 베스트/..</span>
+					<span class="item-price">
+						<strong class="price">5900</strong>원
+					</span>
+				</div>
+			</a>
+		</div>
+
+	</article>
+</section>
+
+<footer>
+	<address>
+		<strong>(주)지에스홈쇼핑 대표이사 허태수</strong>서울시 영등포구 선유로 75 GS강서타워<br>개인정보보호책임자: 홍경모 / 호스팅제공자 (주)지에스홈쇼핑<br>사업자등록번호 117-81-13253 통신판매업신고 영등포구청 제 2002-00068호<br>
+	</address>
+</footer>
+
+<!-- modal layer -->
+<section class="layer-pop" style="display:none;">
+	<div class="modal-layer">
+		<div class="layer">
+			<div class="modal-header">
+				<h2>Image Select</h2>
+				<a href="" class="close-btn imgir"><span class="hdtxt">닫기</span></a>
+			</div>
+			<div class="modal-body">
+				<!-- contents -->
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default">검색</button>
+			</div>
+		</div>
+	</div>
+	<div class="dim-layer"></div>
+</section>
+
+<script src=""></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>맥북이 탐나::hackton</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<script type="application/json" id="entry-data"></script>
+
+<header>
+	<div class="search-box">
+		<input type="text" class="search-input" name="search" placeholder="검색" />
+		<a href="#" class="search-btn"><i class="search-icon glyphicon glyphicon-search" aria-hidden="true"></i></a>
+	</div>
+	<div class="photo-mask__rect main"></div>
+	<div class="component-file__camera">
+		<form id="photosent" action="/form.html" method="GET" enctype="multipart/form-data">
+			<input type="file" class="camera" id="capture" name="capture" accept="image/*">
+			<label for="capture">
+				<i class="glyphicon glyphicon-camera"></i>
+			</label>
+		</form>
+	</div>
+</header>

@@ -1,0 +1,32 @@
+{{> header}}
+
+<section>
+	<article class="search-item default-item">
+		<h2 class="hdtxt">검색상품 리스트</h2>
+
+		{{#data.searchdata}}
+		<div class="item" data-prdCd="{{prdCd}}">
+			<a href="#">
+				<div class="item-thumb">
+					<img src="{{repImage}}" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">{{prdNm}}</span>
+					<span class="item-price">
+						<strong class="price">{{priceFomat price}}</strong>원
+					</span>
+					<!--span class="likes"><i class="glyphicon glyphicon-heart"></i></span-->
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="{{percent}}">
+						<strong>{{percent}}%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		{{/data}}
+
+	</article>
+</section>
+
+{{> footer}}

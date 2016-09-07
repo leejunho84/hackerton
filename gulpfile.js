@@ -2,15 +2,58 @@
 
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
+var sass = require('gulp-sass');
+var handlebars = require('gulp-compile-handlebars');
+var rename = require('gulp-rename');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+
+
 
 // Static server
-gulp.task('browser-sync', function() {
+gulp.task('staticServer', ['build:templates'], function() {
 	browserSync.init({
 		server: {
-			baseDir: "./src"
+			baseDir: "./build"
 		}
 	});
 });
 
 
-gulp.task('default', ['browser-sync']);
+
+gulp.task('build:templates', ['build:scripts'], function () {
+	var templateData = require('./src/json/dummy');
+	var options = {
+		ignorePartials:true, //ignores the unknown footer2 partial in the handlebars template, defaults to false 
+		batch:['./src/templates/partials']
+	}
+
+	return gulp.src('src/templates/home.hbs')
+	.pipe(handlebars(templateData, options))
+	.pipe(rename('index.html'))
+	.pipe(gulp.dest('./build/'));
+});
+
+
+
+gulp.task('build:scripts', function(){
+	return gulp.src('src/js/**/*.js')
+		.pipe(concat('index.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('./build/js/'));
+});
+
+ 
+gulp.task('build:sass', function () {
+	return gulp.src('src/sass/**/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest('./build/css'));
+});
+
+ 
+gulp.task('sass:watch', function () {
+	gulp.watch('./sass/**/*.scss', ['build:sass']);
+});
+
+
+gulp.task('default', ['staticServer']);

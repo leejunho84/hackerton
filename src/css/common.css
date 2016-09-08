@@ -107,7 +107,7 @@ footer {width:100%; height:120px; border-top:1px solid #c9c9c9; background:#ebeb
 .search-photo {padding:20px 0;}
 .search-photo > .title {text-align:center; font-size:20px; font-weight:bold; margin:10px 0;}
 .photo-mask__rect {display:block; width:100%;}
-.photo-mask__rect.main {height:150px; background:#00bcd4; /*background-image:url("/images/pattern_1.png");*/}
+.photo-mask__rect.main {height:150px; background:#00bcd4;}
 .photo-mask__rect img {width:100%;}
 .photo-mask__circle {
 	display:block;
@@ -136,7 +136,7 @@ footer address strong {display:block; margin-bottom:10px; font-weight:bold; font
 .modal-layer .layer .modal-footer {position:absolute; bottom:0; width:100%; padding:15px; text-align:center; background:#FBFBFB;}
 .modal-layer .layer .modal-footer .btn {width:150px;}
 .dim-layer {position:fixed; top:0; left:0; right:0; bottom:0; background:#000; opacity:0.7;}
-.close-btn {position:absolute; top:50%; right:12px; margin-top:-7px; width:15px; height:15px; background-image:url("/images/ico_checkbox_modal.png"); background-size:50px 150px; background-position:-5px -53px;}
+.close-btn {position:absolute; top:50%; right:12px; margin-top:-7px; width:15px; height:15px; background-image:url("/images2/ico_checkbox_modal.png"); background-size:50px 150px; background-position:-5px -53px;}
 
 
 

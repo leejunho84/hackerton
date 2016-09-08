@@ -1,4 +1,4 @@
-{{> header}}
+{{> shop/partials/header}}
 
 <section>
 	<article class="search-item default-item">
@@ -6,7 +6,7 @@
 		<div class="yourphoto">
 			<img src="{{data.qimgUrl}}" />
 		</div>
-		{{#each data.searchDataList}}
+		{{#each entryData.searchDataList}}
 		<div class="item" data-prdCd="{{prdCd}}">
 			<a href="#">
 				<div class="item-thumb">
@@ -31,4 +31,4 @@
 	</article>
 </section>
 
-{{> footer}}
+{{> shop/partials/footer}}

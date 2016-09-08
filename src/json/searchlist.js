@@ -1,4 +1,4 @@
-exports.data = {
+exports.entryData = {
 	"strBox": "",
 	"searchDataList": [{
 		"prdCd": 21135838,

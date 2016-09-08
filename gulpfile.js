@@ -22,17 +22,18 @@ gulp.task('staticServer', function() {
 
 
 gulp.task('build:templates', function () {
-	//var templateData = require('./src/json/dummy');
-	var templateData = require('./src/json/searchlist');
+	var templateData = require('./src/json/home');
+	//var templateData = require('./src/json/searchlist');
 	var options = {
 		ignorePartials:true,
-		batch:['./src/templates/partials']
+		batch:['./src/templates/']
 	}
 
-	//return gulp.src('src/templates/home.hbs')
-	return gulp.src('src/templates/searchlist.hbs')
+	return gulp.src('src/templates/shop/home.hbs')
+	//return gulp.src('src/templates/shop/searchResult.hbs')
 	.pipe(handlebars(templateData, options))
-	.pipe(rename('search.html'))
+	.pipe(rename('index.html'))
+	//.pipe(rename('searchResult.html'))
 	.pipe(gulp.dest('./build/'))
 	.pipe(browserSync.reload({stream:true}));
 });

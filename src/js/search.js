@@ -1,5 +1,18 @@
 (function($, ns){
 	var pattern = /(https|http):\/\//;
+	var formTemplate = '<form id="favorite-search" action="/search" method="POST" enctype="multipart/form-data">{{input}}</form>';
+	var inputTemplate = '<div class="component-radio"><input type="radio" name="chkimg" id="chkimg_{{index}}" /><label for="chkimg_{{index}}"><img src="{{images}}" /><i class="glyphicon glyphicon-ok"></i><span class="dim"></span></label></div>';
+	if($('.layer-pop').length > 0) var modalLayer = new ht.modalLayer().init({
+			callbackFunc:function(){
+				var form = $('#favorite-search');
+				if($(':radio[name="chkimg"]:checked')){
+					form.submit();
+				}else{
+					alert('image select please.');
+				}
+			}
+		});
+
 	var SearchModule = function(){return this;}
 	SearchModule.prototype.init = function(){
 		this.searchInput = $('.search-input');
@@ -48,12 +61,20 @@
 			method:'POST',
 			dataType: "html",
 			success:function(data){
-				_that.makeTemplate(data);
+				modalLayer.appendHtml(_that.makeTemplate(data));
 			}
 		});
 	}
 	SearchModule.prototype.makeTemplate = function(data){
-		console.log(data);
+		var appendTxt = formTemplate.replace(/{{input}}/, function(match){
+			var txt = '';
+			for(var key in data.tingleList){
+				appendTxt += inputTemplate.replace(/{{index}}/g).replace(/{{images}}/g);	
+			}
+
+			return match + txt;
+		});
+		return appendTxt;
 	}
 
 	ns['searchModule'] = SearchModule;

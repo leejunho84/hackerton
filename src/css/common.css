@@ -94,9 +94,10 @@ footer {width:100%; height:120px; border-top:1px solid #c9c9c9; background:#ebeb
 .component-file__camera label > i {margin-top:15px; font-size:40px; color:#00bcd4;}
 
 
-.component-radio {overflow:hidden; float:left; width:120px; padding-top:5px; padding-left:5px;}
+.component-radio {overflow:hidden; margin-top:10px;}
+.component-radio:first-child {margin-top:0;}
 .component-radio img {width:100%;}
-.component-radio label {position:relative; margin:0; padding:0;}
+.component-radio label {display:block; position:relative; margin:0; padding:0;}
 .component-radio input[type=radio] {position:absolute; visibility:hidden;}
 .component-radio input[type=radio] ~ label > i {display:none; position:absolute;top:0;right:0;}
 .component-radio input[type=radio]:checked ~ label > i{display:block; padding:5px; font-size:15px; color:#fff; background-color:#00bcd4;}
@@ -129,10 +130,10 @@ footer address strong {display:block; margin-bottom:10px; font-weight:bold; font
 /*modal layer*/
 .layer-pop {display:none;}
 .modal-layer {position:fixed; top:0; left:0; width:100%; height:100%; padding:20px; z-index:1;}
-.modal-layer .layer{/*position:relative; min-height:100%;*/ background:#FBFBFB;}
-.modal-layer .layer .modal-header {position:relative; padding:15px;}
-.modal-layer .layer .modal-body {min-height:100%; overflow:hidden;}
-.modal-layer .layer .modal-footer {/*position:absolute; left:0; bottom:0; right:0;*/ padding:15px; text-align:center;}
+.modal-layer .layer{overflow:hidden; position:relative; max-height:100%; background:#FBFBFB;}
+.modal-layer .layer .modal-header {position:relative; padding:15px; background:#FBFBFB;}
+.modal-layer .layer .modal-body {overflow:scroll; padding:17px 15px 84px; height: 587px;}
+.modal-layer .layer .modal-footer {position:absolute; bottom:0; width:100%; padding:15px; text-align:center; background:#FBFBFB;}
 .modal-layer .layer .modal-footer .btn {width:150px;}
 .dim-layer {position:fixed; top:0; left:0; right:0; bottom:0; background:#000; opacity:0.7;}
 .close-btn {position:absolute; top:50%; right:12px; margin-top:-7px; width:15px; height:15px; background-image:url("/images/ico_checkbox_modal.png"); background-size:50px 150px; background-position:-5px -53px;}

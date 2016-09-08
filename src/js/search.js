@@ -18,7 +18,7 @@
 		this.searchInput = $('.search-input');
 		this.searchBtn = $('.search-btn');
 		this.searchCapture = $('#capture');
-		this.photoForm = $('#photoSent');
+		this.photoForm = $('#photosent');
 		this.searchForm = $('#searchSent');
 
 		return this;
@@ -45,7 +45,8 @@
 		});
 
 		this.searchCapture.on('change', function(){
-			this.photoForm.submit();
+			console.log('change');
+			_that.photoForm.submit();
 			/*var reader = new FileReader();
 			reader.readAsDataURL(this.files[0]);
 			reader.onload = function (e){

@@ -16,12 +16,14 @@
 
 <header>
 	<div class="search-box">
-		<input type="text" class="search-input" name="search" placeholder="검색" />
+		<form id="searchSent" action="/search" method="POST" enctype="multipart/form-data">
+			<input type="text" class="search-input" name="sType" placeholder="검색" />
+		</form>
 		<a href="#" class="search-btn"><i class="search-icon glyphicon glyphicon-search" aria-hidden="true"></i></a>
 	</div>
 	<div class="photo-mask__rect main"></div>
 	<div class="component-file__camera">
-		<form id="photosent" action="/form.html" method="GET" enctype="multipart/form-data">
+		<form id="photosent" action="/search" method="POST" enctype="multipart/form-data">
 			<input type="file" class="camera" id="capture" name="capture" accept="image/*">
 			<label for="capture">
 				<i class="glyphicon glyphicon-camera"></i>

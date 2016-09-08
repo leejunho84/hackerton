@@ -11,7 +11,7 @@ var uglify = require('gulp-uglify');
 
 
 // Static server
-gulp.task('staticServer', ['build:templates'], function() {
+gulp.task('staticServer', function() {
 	browserSync.init({
 		server: {
 			baseDir: "./build"
@@ -21,39 +21,51 @@ gulp.task('staticServer', ['build:templates'], function() {
 
 
 
-gulp.task('build:templates', ['build:scripts'], function () {
-	var templateData = require('./src/json/dummy');
+gulp.task('build:templates', function () {
+	//var templateData = require('./src/json/dummy');
+	var templateData = require('./src/json/searchlist');
 	var options = {
-		ignorePartials:true, //ignores the unknown footer2 partial in the handlebars template, defaults to false 
+		ignorePartials:true,
 		batch:['./src/templates/partials']
 	}
 
-	return gulp.src('src/templates/home.hbs')
+	//return gulp.src('src/templates/home.hbs')
+	return gulp.src('src/templates/searchlist.hbs')
 	.pipe(handlebars(templateData, options))
-	.pipe(rename('index.html'))
-	.pipe(gulp.dest('./build/'));
+	.pipe(rename('search.html'))
+	.pipe(gulp.dest('./build/'))
+	.pipe(browserSync.reload({stream:true}));
 });
 
 
 
 gulp.task('build:scripts', function(){
-	return gulp.src('src/js/**/*.js')
+	return gulp.src(['src/js/libs/jquery.1.7.2.js', 'src/js/**/*.js'])
 		.pipe(concat('index.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./build/js/'));
+		//.pipe(uglify())
+		.pipe(gulp.dest('./build/js/'))
+		.pipe(browserSync.reload({stream:true}));
+
 });
 
  
 gulp.task('build:sass', function () {
-	return gulp.src('src/sass/**/*.scss')
-		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest('./build/css'));
+	return gulp.src('src/css/**/*.css')
+		.pipe(gulp.dest('./build/css'))
+		.pipe(browserSync.reload({stream:true}));
+		//return gulp.src('src/sass/**/*.scss')
+		/*.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest('./build/css'))
+		.pipe(browserSync.reload({stream:true}));*/
 });
-
  
-gulp.task('sass:watch', function () {
-	gulp.watch('./sass/**/*.scss', ['build:sass']);
+gulp.task('watch', function () {
+	gulp.watch('./src/templates/**/*.hbs', ['build:templates'])
+	gulp.watch('./src/css/**/*.css', ['build:sass']);
+	gulp.watch('./src/js/**/*.js', ['build:scripts']);
 });
 
 
-gulp.task('default', ['staticServer']);
+
+gulp.task('default', ['staticServer', 'watch']);
+gulp.task('build', ['build:templates', 'build:scripts', 'build:sass']);

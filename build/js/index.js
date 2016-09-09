@@ -174,7 +174,7 @@ $(function(){
 	var searchModule = new ht.searchModule().init().addEvent();
 
 	$(window).resize(function(e){
-		swipe.resize();
+		if($('.swiper-container')) swipe.resize();
 	});
 });
 (function($, ns){

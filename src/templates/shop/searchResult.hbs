@@ -4,20 +4,20 @@
 	<article class="search-item default-item">
 		<h2 class="hdtxt">검색상품 리스트</h2>
 		<div class="yourphoto">
-			<img src="{{data.qimgUrl}}" />
+			<img src="{{entryData.qimgUrl}}" />
 		</div>
 		{{#each entryData.searchDataList}}
 		<div class="item" data-prdCd="{{prdCd}}">
-			<a href="#">
+			<a href="{{link}}">
 				<div class="item-thumb">
-					<img src="{{repImage}}" />
+					<img src="images2/{{repImage}}" />
 				</div>
 				<div class="item-info">
 					<span class="item-title">{{prdNm}}</span>
 					<span class="item-price">
-						<strong class="price">{{price}}</strong>원
+						<strong class="price">{{salePrc}}</strong>원
 					</span>
-					<!--span class="likes"><i class="glyphicon glyphicon-heart"></i></span-->
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
 				</div>
 				<div class="item-matchinfo">
 					<span class="percent" style="width:{{similarity}}%;">

@@ -1,4 +1,4 @@
-{{> header}}
+{{> shop/partials/header}}
 
 <section>
 	<article class="today-hotdeal">
@@ -6,8 +6,8 @@
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 			<ul class="swiper">
-				
-				{{#each data.planPrdList}}
+
+				{{#each entryData.planPrdList}}
 				<li class="swiper-slide">
 					<div class="product-wrap" data-prdCd="{{prdCd}}">
 						<a class="product-deal" href="{{link}}">
@@ -32,7 +32,7 @@
 	<article class="favorite-item default-item">
 		<h2 class="hdtxt">인기상품</h2>
 
-		{{#each data.prdList}}
+		{{#each entryData.prdList}}
 		<div class="item" data-prdCd="{{prdCd}}">
 			<a href="{{link}}">
 				<div class="item-thumb">
@@ -51,4 +51,4 @@
 	</article>
 </section>
 
-{{> footer}}
+{{> shop/partials/footer}}

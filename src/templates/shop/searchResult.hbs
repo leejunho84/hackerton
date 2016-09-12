@@ -1,0 +1,34 @@
+{{> shop/partials/header}}
+
+<section>
+	<article class="search-item default-item">
+		<h2 class="hdtxt">검색상품 리스트</h2>
+		<div class="yourphoto">
+			<img src="{{entryData.qimgUrl}}" />
+		</div>
+		{{#each entryData.searchDataList}}
+		<div class="item" data-prdCd="{{prdCd}}">
+			<a href="{{link}}">
+				<div class="item-thumb">
+					<img src="images2/{{repImage}}" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">{{prdNm}}</span>
+					<span class="item-price">
+						<strong class="price">{{salePrc}}</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:{{similarity}}%;">
+						<strong>{{similarityFloat}}%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		{{/each}}
+
+	</article>
+</section>
+
+{{> shop/partials/footer}}

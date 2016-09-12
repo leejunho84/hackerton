@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>맥북이 탐나::hackton</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<script type="application/json" id="entry-data"></script>
+
+<header>
+	<div class="search-box">
+		<form id="searchSent" action="/search" method="GET" enctype="multipart/form-data">
+			<input type="text" class="search-input" name="sType" placeholder="검색" />
+		</form>
+		<a href="#" class="search-btn"><i class="search-icon glyphicon glyphicon-search" aria-hidden="true"></i></a>
+	</div>
+	<div class="photo-mask__rect main"></div>
+	<div class="component-file__camera">
+		<form id="photosent" action="/search" method="POST" enctype="multipart/form-data">
+			<input type="file" class="camera" id="capture" name="capture" accept="image/*">
+			<label for="capture">
+				<i class="glyphicon glyphicon-camera"></i>
+			</label>
+		</form>
+	</div>
+</header>
+<section>
+	<article class="search-item default-item">
+		<h2 class="hdtxt">검색상품 리스트</h2>
+		<div class="yourphoto">
+			<img src="http://www.robo.co.kr/web/product/medium/robokorea_252.jpg" />
+		</div>
+		<div class="item" data-prdCd="21135838">
+			<a href="/prd/prd.gs?prdid=21135838&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/21135838.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">ROBO 베지터블 라운드 카라 코트</span>
+					<span class="item-price">
+						<strong class="price">248000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:99%;">
+						<strong>99.19%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="22058032">
+			<a href="/prd/prd.gs?prdid=22058032&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/22058032.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[16년 FW신상] 로보 이태리 베지터블 롱베스트</span>
+					<span class="item-price">
+						<strong class="price">347000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:60%;">
+						<strong>60.35%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="22058032">
+			<a href="/prd/prd.gs?prdid=22058032&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/22058032.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[16년 FW신상] 로보 이태리 베지터블 롱베스트</span>
+					<span class="item-price">
+						<strong class="price">347000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:60%;">
+						<strong>60.35%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="19490919">
+			<a href="/prd/prd.gs?prdid=19490919&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/19490919.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">로보 블로썸 베지터블 롱코트</span>
+					<span class="item-price">
+						<strong class="price">498000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:60%;">
+						<strong>60.18%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="20675031">
+			<a href="/prd/prd.gs?prdid=20675031&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/20675031.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[보스룸]여자천연 양털 버버리 트렌치코트 무스탕 카멜</span>
+					<span class="item-price">
+						<strong class="price">1690000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:59%;">
+						<strong>59.63%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="20527880">
+			<a href="/prd/prd.gs?prdid=20527880&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/20527880.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">딜)ROBO 이태리 베지터블워싱 야상</span>
+					<span class="item-price">
+						<strong class="price">198000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:58%;">
+						<strong>58.32%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="18441790">
+			<a href="/prd/prd.gs?prdid=18441790&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/18441790.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">ROBO 쉬어드 후드 무스탕코트</span>
+					<span class="item-price">
+						<strong class="price">890000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:55%;">
+						<strong>55.63%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="19490919">
+			<a href="/prd/prd.gs?prdid=19490919&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/19490919.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">로보 블로썸 베지터블 롱코트</span>
+					<span class="item-price">
+						<strong class="price">498000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:55%;">
+						<strong>55.31%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="19066275">
+			<a href="/prd/prd.gs?prdid=19066275&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/19066275.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[빈폴레이디스] 베이지 텐셀 셋인 트렌치 코트 (BF623TC01A)</span>
+					<span class="item-price">
+						<strong class="price">301770</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:53%;">
+						<strong>53.86%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="22058032">
+			<a href="/prd/prd.gs?prdid=22058032&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/22058032.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[16년 FW신상] 로보 이태리 베지터블 롱베스트</span>
+					<span class="item-price">
+						<strong class="price">347000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:53%;">
+						<strong>53.12%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="22058032">
+			<a href="/prd/prd.gs?prdid=22058032&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/22058032.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[16년 FW신상] 로보 이태리 베지터블 롱베스트</span>
+					<span class="item-price">
+						<strong class="price">347000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:53%;">
+						<strong>53.12%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="22182558">
+			<a href="/prd/prd.gs?prdid=22182558&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/22182558.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[르윗] 앙고라 니트 롱 가디건(LEF1KCD020)</span>
+					<span class="item-price">
+						<strong class="price">89000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:53%;">
+						<strong>53.09%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="17868939">
+			<a href="/prd/prd.gs?prdid=17868939&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/17868939.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">ROBO 뉴컬렉션 가죽 케이프</span>
+					<span class="item-price">
+						<strong class="price">398000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:52%;">
+						<strong>52.93%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="19207237">
+			<a href="/prd/prd.gs?prdid=19207237&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/19207237.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[빈폴레이디스] 카키 본딩 디테쳐블 사파리 점퍼 (BF6137U01H)</span>
+					<span class="item-price">
+						<strong class="price">377370</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:52%;">
+						<strong>52.73%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="18441790">
+			<a href="/prd/prd.gs?prdid=18441790&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/18441790.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">ROBO 쉬어드 후드 무스탕코트</span>
+					<span class="item-price">
+						<strong class="price">890000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:52%;">
+						<strong>52.66%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="22059265">
+			<a href="/prd/prd.gs?prdid=22059265&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/22059265.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">로보 베지터블 트라페즈 코트</span>
+					<span class="item-price">
+						<strong class="price">497000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:51%;">
+						<strong>51.92%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="20400006">
+			<a href="/prd/prd.gs?prdid=20400006&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/20400006.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">브에뜨르 프렌치 린넨 가디건   실크스카프 SET</span>
+					<span class="item-price">
+						<strong class="price">39900</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:51%;">
+						<strong>51.91%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="20025804">
+			<a href="/prd/prd.gs?prdid=20025804&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/20025804.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[샤틴] 페미닌 배색 볼륨 원피스</span>
+					<span class="item-price">
+						<strong class="price">159200</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:51%;">
+						<strong>51.88%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="22057735">
+			<a href="/prd/prd.gs?prdid=22057735&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/22057735.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[빌드]BGFN501 멜로우 니트 탑/빅사이즈/미시/여성/루즈/가을</span>
+					<span class="item-price">
+						<strong class="price">38000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:51%;">
+						<strong>51.81%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="21965332">
+			<a href="/prd/prd.gs?prdid=21965332&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/21965332.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[SOLOIST] 셔링 롱 블라우스 WI SADG3117</span>
+					<span class="item-price">
+						<strong class="price">19900</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:51%;">
+						<strong>51.57%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="20675031">
+			<a href="/prd/prd.gs?prdid=20675031&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/20675031.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[보스룸]여자천연 양털 버버리 트렌치코트 무스탕 카멜</span>
+					<span class="item-price">
+						<strong class="price">1690000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:51%;">
+						<strong>51.09%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="22065145">
+			<a href="/prd/prd.gs?prdid=22065145&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/22065145.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[쉬즈미스] 모던 클래식 더블 트렌치 코트(SWBYG50030)</span>
+					<span class="item-price">
+						<strong class="price">180000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:51%;">
+						<strong>51.08%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+		<div class="item" data-prdCd="20675142">
+			<a href="/prd/prd.gs?prdid=20675142&amp;amp;arm=--U&amp;amp;expId=">
+				<div class="item-thumb">
+					<img src="images2/images/reps/20675142.jpg" />
+				</div>
+				<div class="item-info">
+					<span class="item-title">[보스룸]여자천연양털 카라 소매 폭스퍼 무스탕코트</span>
+					<span class="item-price">
+						<strong class="price">1100000</strong>원
+					</span>
+					<span class="likes"><i class="glyphicon glyphicon-heart"></i></span>
+				</div>
+				<div class="item-matchinfo">
+					<span class="percent" style="width:50%;">
+						<strong>50.6%</strong>
+					</span>
+				</div>
+			</a>
+		</div>
+
+	</article>
+</section>
+
+<footer>
+	<address>
+		<strong>(주)지에스홈쇼핑 대표이사 허태수</strong>서울시 영등포구 선유로 75 GS강서타워<br>개인정보보호책임자: 홍경모 / 호스팅제공자 (주)지에스홈쇼핑<br>사업자등록번호 117-81-13253 통신판매업신고 영등포구청 제 2002-00068호<br>
+	</address>
+</footer>
+
+<!-- modal layer -->
+<section class="layer-pop" style="display:none;">
+	<div class="modal-layer">
+		<div class="layer">
+			<div class="modal-header">
+				<h2>Image Select</h2>
+				<a href="" class="close-btn imgir"><span class="hdtxt">닫기</span></a>
+			</div>
+			<div class="modal-body">
+				<!-- contents -->
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default">검색</button>
+			</div>
+		</div>
+	</div>
+	<div class="dim-layer"></div>
+</section>
+
+<script src="/js/index.js"></script>
+</body>
+</html>

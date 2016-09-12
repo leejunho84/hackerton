@@ -24,7 +24,7 @@ gulp.task('staticServer', ['build:templates'], function() {
 gulp.task('build:templates', ['build:scripts'], function () {
 	var templateData = require('./src/json/dummy');
 	var options = {
-		ignorePartials:true, //ignores the unknown footer2 partial in the handlebars template, defaults to false 
+		ignorePartials:true,
 		batch:['./src/templates/partials']
 	}
 

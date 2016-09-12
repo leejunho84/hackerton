@@ -22,18 +22,18 @@ gulp.task('staticServer', function() {
 
 
 gulp.task('build:templates', function () {
-	//var templateData = require('./src/json/home');
-	var templateData = require('./src/json/searchlist');
+	var templateData = require('./src/json/home');
+	//var templateData = require('./src/json/searchlist');
 	var options = {
 		ignorePartials:true,
-		batch:['./src/templates/partials']
+		batch:['./src/templates/shop/partials']
 	}
 
-	//return gulp.src('src/templates/shop/home.hbs')
-	return gulp.src('src/templates/shop/searchResult.hbs')
+	return gulp.src('src/templates/shop/home.hbs')
+	//return gulp.src('src/templates/shop/searchResult.hbs')
 	.pipe(handlebars(templateData, options))
-	//.pipe(rename('index.html'))
-	.pipe(rename('searchResult.html'))
+	.pipe(rename('index.html'))
+	//.pipe(rename('searchResult.html'))
 	.pipe(gulp.dest('./build/'))
 	.pipe(browserSync.reload({stream:true}));
 });
@@ -65,8 +65,6 @@ gulp.task('watch', function () {
 	gulp.watch('./src/css/**/*.css', ['build:sass']);
 	gulp.watch('./src/js/**/*.js', ['build:scripts']);
 });
-
-
 
 gulp.task('default', ['staticServer', 'watch']);
 gulp.task('build', ['build:templates', 'build:scripts', 'build:sass']);

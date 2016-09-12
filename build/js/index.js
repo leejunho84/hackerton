@@ -224,11 +224,11 @@ $(function(){
 (function($, ns){
 	var pattern = /(https|http):\/\//;
 	var formTemplate = '<form id="favorite-search" action="/search" method="POST" enctype="multipart/form-data">{{input}}</form>';
-	var inputTemplate = '<div class="component-radio"><input type="radio" name="chkimg" id="chkimg_{{index}}" /><label for="chkimg_{{index}}"><img src="{{images}}" /><i class="glyphicon glyphicon-ok"></i><span class="dim"></span></label></div>';
+	var inputTemplate = '<div class="component-radio"><input type="radio" name="chkimg" id="chkimg_{{index}}" value="{{images}}" /><label for="chkimg_{{index}}"><img src="{{images}}" /><i class="glyphicon glyphicon-ok"></i><span class="dim"></span></label></div>';
 	if($('.layer-pop').length > 0) var modalLayer = new ht.modalLayer().init({
 			callbackFunc:function(){
 				var form = $('#favorite-search');
-				if($(':radio[name="chkimg"]:checked')){
+				if(form.find(':radio[name="chkimg"]:checked').length > 0){
 					form.submit();
 				}else{
 					alert('image select please.');
@@ -250,10 +250,15 @@ $(function(){
 		var _that = this;
 		this.searchInput.on({
 			'focusin':function(){
-				console.log('focusin');
+				$(document).on('keydown', function(e){
+					if(e.keyCode == 13){
+						e.preventDefault();
+						_that.ajaxData('/json/ajaxSearch.json');
+					}
+				});
 			},
 			'focusout':function(){
-				console.log('focusout');
+				$(document).off('keydown');				
 			}
 		});
 
@@ -264,6 +269,7 @@ $(function(){
 				_that.searchForm.submit();
 			}else{
 				_that.ajaxData('/ajaxSearch');
+				//_that.ajaxData('/json/ajaxSearch.json');
 			}
 		});
 
@@ -281,22 +287,26 @@ $(function(){
 		var _that = this;
 		$.ajax({
 			url:url,
-			data:{'sType':this.searchInput.val()},
+			data:{'sType':'', 'q':this.searchInput.val()},
 			method:'POST',
-			dataType: "html",
+			dataType: "JSON",
 			success:function(data){
 				modalLayer.appendHtml(_that.makeTemplate(data));
 			}
 		});
 	}
 	SearchModule.prototype.makeTemplate = function(data){
-		var appendTxt = formTemplate.replace(/{{input}}/, function(match){
+		//var arrCrawling = ['daumList', 'tingleList', 'instagramList'];
+		var arrCrawling = ['daumList'] // 다음, 팅글, 인스타그램 데이터 images 키 값이 다름 일단 다음만
+		var appendTxt = formTemplate.replace(/{{input}}/, function(){
 			var txt = '';
-			for(var key in data.tingleList){
-				appendTxt += inputTemplate.replace(/{{index}}/g).replace(/{{images}}/g);	
+			for(var i=0; i<arrCrawling.length; i++){
+				for(var key in data[arrCrawling[i]]){
+					txt += inputTemplate.replace(/{{index}}/g, key).replace(/{{images}}/g, data[arrCrawling[i]][key].image);
+				}
 			}
 
-			return match + txt;
+			return txt;
 		});
 		return appendTxt;
 	}

@@ -1,0 +1,23 @@
+.component-file__camera {
+	text-align:center;
+	margin-top:-38px;
+
+	input[type=file]{
+		position:absolute;
+		visibility:hidden;
+	}
+
+	label{
+		width:75px;
+		height:75px;
+		border-radius:50%;
+		background:#fff;
+		box-shadow:#969696 0 0 6px;
+
+		i{
+			margin-top:15px;
+			font-size:40px;
+			color:#00bcd4;
+		}
+	}
+}
